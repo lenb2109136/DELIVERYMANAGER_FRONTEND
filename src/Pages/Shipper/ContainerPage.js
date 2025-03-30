@@ -9,7 +9,13 @@ const ContainerShipper = () => {
   const [collapsed, setCollapsed] = useState(false);
   const navigate=useNavigate();
   const [position, setPosition] = useState({ latitude: null, longitude: null });
-
+  useEffect(()=>{
+   let r =localStorage.getItem("role");
+   let t=localStorage.getItem("accessToken");
+   if(t==null || r==null ||JSON.parse(r)!="SHIPPER"){
+    navigate(-1)
+   }
+  },[])
   // useEffect(()=>{
   //   if (!navigator.geolocation) {
   //     alert("Trình duyệt của bạn không hỗ trợ Geolocation!");

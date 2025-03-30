@@ -16,6 +16,7 @@ import OrderGiaoHang from "./Pages/Shipper/DonGiao";
 import DonGiaoHang from "./Pages/Shipper/DonGiaoHang"
 import ThoiGianThuc from "./Pages/Shipper/ThoiGianThuc"
 import ThongKe from "./Pages/Shipper/quanlyquatrinh"
+import LoGin from "./Pages/Login"
 const ContainerCustomerPage = lazy(() => import("./Pages/Customer/ContainerPage"));
 const AddOrder = lazy(() => import("./Pages/Customer/AddOrder"));
 const ContainerAdminPage = lazy(() => import("./Pages/Admin/ContainerPage"));
@@ -51,6 +52,7 @@ function App() {
               <Route path="thongke"  element={<ThongKe></ThongKe>}></Route>
               
             </Route>
+            <Route path="/login" element={<LoGin/>} ></Route>
           </Routes>
           
         </Suspense>
